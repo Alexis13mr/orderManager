@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClienteActivity"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Cliente"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nombre"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:nextFocusForward="@id/et_id"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/tv_nombre"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo" />
+
+
+
+    <TextView
+        android:id="@+id/tv_cedula"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Cedula:"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre" />
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:nextFocusForward="@id/et_phone"
+        android:textSize="20dp"
+        android:hint="Cedula"
+        android:inputType="number"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/tv_cedula"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre"/>
+
+    <TextView
+        android:id="@+id/tv_telefono"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Telefono:"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cedula" />
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:nextFocusForward="@id/et_address"
+        android:textSize="20dp"
+        android:hint="Telefono"
+        android:layout_marginStart="20dp"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/tv_telefono"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cedula"/>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Dirección:"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_telefono" />
+
+    <EditText
+        android:id="@+id/et_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:nextFocusForward="@id/btn_save"
+        android:hint="Dirección"
+        android:layout_marginStart="20dp"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@id/tv_address"
+        app:layout_constraintTop_toBottomOf="@+id/tv_telefono"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="#000000"
+        android:text="Guardar cliente"
+        android:nextFocusForward="@id/btn_cancel"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/btn_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#000000"
+        android:text="Descartar"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+    <ScrollView
+        android:id="@+id/sv1"
+        android:layout_width="409dp"
+        android:layout_height="240dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_address">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <TableLayout
+                android:id="@+id/tlTabla"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
